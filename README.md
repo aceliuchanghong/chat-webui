@@ -1,23 +1,16 @@
 [**🇨🇳中文**](https://github.com/shibing624/chatgpt-webui/blob/main/README.md) | [**🌐English**](https://github.com/shibing624/chatgpt-webui/blob/main/README_EN.md) | [**📖文档/Docs**](https://github.com/shibing624/chatgpt-webui/wiki) | [**🤖模型/Models**](https://huggingface.co/shibing624) 
 
-<div align="center">
-  <a href="https://github.com/shibing624/chatgpt-webui">
-    <img src="https://github.com/shibing624/chatgpt-webui/blob/main/assets/icon.png" height="100" alt="Logo">
-  </a>
-</div>
-
 -----------------
 
 # ChatGPT WebUI: ChatGPT webui using gradio
 [![License Apache 2.0](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
 [![python_version](https://img.shields.io/badge/Python-3.8%2B-green.svg)](requirements.txt)
 [![GitHub issues](https://img.shields.io/github/issues/shibing624/chatgpt-webui.svg)](https://github.com/shibing624/chatgpt-webui/issues)
-[![Wechat Group](https://img.shields.io/badge/wechat-group-green.svg?logo=wechat)](#Contact)
 
 
 **chatgpt-webui**: ChatGPT webui using gradio. 为ChatGPT等多种LLM提供了一个轻快好用的Web图形界面
 
-![img](https://github.com/shibing624/chatgpt-webui/blob/main/docs/chat.png)
+![chat.png](docs%2Fchat.png)
 
 ## ✨ Features
 本项目基于 [ChuanhuChatGPT](https://github.com/GaiZhenbiao/ChuanhuChatGPT) 简化而来，主要改动如下：
@@ -31,13 +24,6 @@
    - Chinese chunk切分优化
 6. 优化了在线搜索功能，支持DuckDuckGo、Google、Bing、Serper等搜索引擎，提升搜索准确率
 
-## 支持模型
-
-- [ChatGPT(GPT-4)](https://chat.openai.com) 
-- [Azure OpenAI](https://azure.microsoft.com/en-us/products/ai-services/openai-service)
-- [ChatGLM3-6b](https://github.com/THUDM/ChatGLM3)
-- [Chinese-LLaMA-Alpaca-2](https://github.com/ymcui/Chinese-LLaMA-Alpaca-2)
-- [YI](https://github.com/01-ai/Yi)
 ## 使用技巧
 
 ### 💪 强力功能
@@ -87,9 +73,10 @@
 在终端执行以下命令：
 
 ```shell
-git clone https://github.com/shibing624/chatgpt-webui.git
-cd chatgpt-webui
-pip install -r requirements.txt
+pip freeze > requirements.txt
+conda create -n myWebUI python=3.11
+conda activate myWebUI
+pip install -r requirements.txt --proxy=127.0.0.1:10809
 ```
 
 然后，在项目文件夹中复制一份 `config_example.json`，并将其重命名为 `config.json`，在其中填入 `API-Key` 等设置。
@@ -99,34 +86,3 @@ python main.py
 ```
 
 一个浏览器窗口将会自动打开，可以与ChatGPT或其他模型进行对话。
-
-
-## 疑难杂症解决
-
-在遇到各种问题查阅相关信息前，您可以先尝试 **手动拉取本项目的最新更改<sup>1</sup>** 并 **更新依赖库<sup>2</sup>**，然后重试。步骤为：
-
-1. 点击网页上的 `Download ZIP` 按钮，下载最新代码并解压覆盖，或
-   ```shell
-   git pull https://github.com/shibing624/chatgpt-webui.git main -f
-   ```
-2. 尝试再次安装依赖（可能本项目引入了新的依赖）
-   ```
-   pip install -r requirements.txt
-   ```
-
-很多时候，这样就可以解决问题。
-
-如果问题仍然存在，请查阅该页面：[常见问题](https://github.com/shibing624/chatgpt-webui/wiki/常见问题)
-
-该页面列出了**几乎所有**您可能遇到的各种问题，包括如何配置代理，以及遇到问题后您该采取的措施，**请务必认真阅读**。
-
-## Contact
-
-- Issue(建议)
-  ：[![GitHub issues](https://img.shields.io/github/issues/shibing624/chatgpt-webui.svg)](https://github.com/shibing624/chatgpt-webui/issues)
-- 邮件我：xuming: xuming624@qq.com
-- 微信我： 加我*微信号：xuming624, 备注：姓名-公司名-NLP* 进NLP交流群（加我拉你进群）。
-
-<img src="https://github.com/shibing624/chatgpt-webui/blob/main/docs/wechat.jpeg" width="200" />
-
-<img src="https://github.com/shibing624/chatgpt-webui/blob/main/docs/wechat_group.png" width="200" />

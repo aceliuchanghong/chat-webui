@@ -1,8 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-@author:XuMing(xuming624@qq.com)
-@description:
-"""
 import gradio as gr
 from loguru import logger
 
